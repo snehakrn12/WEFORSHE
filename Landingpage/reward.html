@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fashion Trivia Quiz</title>
+    <link rel="stylesheet" href="reward.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Fashion Trivia Quiz</h1>
+            <div id="header-info">
+                <p id="question-info"></p>
+                <p id="timer">Time Left: <span id="time-left"></span></p>
+            </div>
+        </header>
+        <div id="game-container">
+            <div id="question-container">
+                <div id="question">Question text</div>
+                <div id="answer-buttons" class="btn-container"></div>
+            </div>
+            <div id="controls">
+                <button id="next-btn" class="btn">Next</button>
+                <button id="end-btn" class="btn">End Game</button>
+                <div id="score">Score: 0</div>
+            </div>
+        </div>
+        <div id="leaderboard-container" style="display: none;">
+            <h2>Leaderboard</h2>
+            <ul id="leaderboard-list"></ul>
+            <button id="play-again-btn" class="btn">Play Again</button>
+        </div>
+        <div id="popup" class="popup" style="display: none;">
+            <div class="popup-content">
+                <h2>Game Over</h2>
+                <p id="final-score">Final Score: 0</p>
+                <input type="text" id="name" placeholder="Enter your name">
+                <button onclick="submitScore()">Submit Score</button>
+            </div>
+        </div>
+    </div>
+    <script src="game.js"></script>
+</body>
+</html>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback on Upcoming Trends</title>
+    <link rel="stylesheet" href="feed.css">
+    <link rel="stylesheet" href="reward.css">
+
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Feedback on Upcoming Fashion Trends</h1>
+            <p><b>Your insights matter! Predict the future trends in fashion.</b></p>
+        </header>
+        <form id="feedback-form">
+            <div class="form-group">
+                <label for="color-trend"><b>Which color do you think will dominate fashion trends next season?</b></label>
+                <select id="color-trend" name="color-trend" onchange="showOtherInput('color-trend')">
+                    <option value="Neon Green">Neon Green</option>
+                    <option value="Lilac">Lilac</option>
+                    <option value="Coral">Coral</option>
+                    <option value="Pastel Yellow">Pastel Yellow</option>
+                    <option value="Other">Other (Please specify)</option>
+                </select>
+                <input type="text" id="color-trend-other" name="color-trend-other" placeholder="Your prediction" style="display: none;">
+            </div>
+            <div class="form-group">
+                <label for="accessory-trend"><b>Predict a fashion accessory that will be popular:</b></label>
+                <select id="accessory-trend" name="accessory-trend" onchange="showOtherInput('accessory-trend')">
+                    <option value="Fanny Packs">Fanny Packs</option>
+                    <option value="Chunky Sneakers">Chunky Sneakers</option>
+                    <option value="Oversized Sunglasses">Oversized Sunglasses</option>
+                    <option value="Berets">Berets</option>
+                    <option value="Other">Other (Please specify)</option>
+                </select>
+                <input type="text" id="accessory-trend-other" name="accessory-trend-other" placeholder="Your prediction" style="display: none;">
+            </div>
+            <div class="form-group">
+                <label for="fabric-trend"><b>What fabric do you believe will trend for sustainability?</b></label>
+                <select id="fabric-trend" name="fabric-trend" onchange="showOtherInput('fabric-trend')">
+                    <option value="Organic Cotton">Organic Cotton</option>
+                    <option value="Tencel (Lyocell)">Tencel (Lyocell)</option>
+                    <option value="Hemp">Hemp</option>
+                    <option value="Bamboo">Bamboo</option>
+                    <option value="Other">Other (Please specify)</option>
+                </select>
+                <input type="text" id="fabric-trend-other" name="fabric-trend-other" placeholder="Your prediction" style="display: none;">
+            </div>
+            <button type="submit" class="btn">Submit Feedback</button>
+        </form>
+        
+        <!-- Popup Modal -->
+        <div class="popup" id="popup">
+            <div class="popup-content">
+                <span class="close" onclick="closePopup()">&times;</span>
+                <h2>Thank You!</h2>
+                <p>Your feedback has been submitted successfully.</p>
+                <div class="coin">
+                    <img src="img/coin.png" alt="Myntra Coin" class="coin-image">
+                    <p class="coin-text"><b>1 Myntra coin has been credited to your account</b></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showOtherInput(fieldId) {
+            var dropdown = document.getElementById(fieldId);
+            var otherInput = document.getElementById(fieldId + '-other');
+
+            if (dropdown.value === 'Other') {
+                otherInput.style.display = 'block';
+            } else {
+                otherInput.style.display = 'none';
+            }
+        }
+
+        function closePopup() {
+            var popup = document.getElementById('popup');
+            popup.style.display = 'none';
+        }
+
+        document.getElementById('feedback-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the form from submitting
+
+            // Implement your form submission logic here (e.g., AJAX request)
+
+            // Show the popup/modal
+            var popup = document.getElementById('popup');
+            popup.style.display = 'block';
+        });
+    </script>
+
+
+    <div>
+        <div class="container">
+            <header>
+                <h1>Fashion Trivia Quiz</h1>
+                <div id="header-info">
+                    <p id="question-info"></p>
+                    <p id="timer">
+                        <b>Time Left:</b> <span id="time-left"></span></p>
+                </div>
+            </header>
+            <div id="game-container">
+                <div id="question-container">
+                    <div id="question"><b>Question text</b></div>
+                    <div id="answer-buttons" class="btn-container"></div>
+                </div>
+                <div id="controls">
+                    <button id="next-btn" class="btn">Next</button>
+                    <button id="end-btn" class="btn">End Game</button>
+                    <div id="score">Score: 0</div>
+                </div>
+            </div>
+            <div id="leaderboard-container" style="display: none;">
+                <h2>Leaderboard</h2>
+                <ul id="leaderboard-list"></ul>
+                <button id="play-again-btn" class="btn">Play Again</button>
+            </div>
+            <div id="popup" class="popup" style="display: none;">
+                <div class="popup-content">
+                    <h2>Game Over</h2>
+                    <p id="final-score">Final Score: 0</p>
+                    <input type="text" id="name" placeholder="Enter your name">
+                    <button onclick="submitScore()">Submit Score</button>
+                </div>
+            </div>
+        </div>
+        <script src="reward.js"></script>
+
+
+
+    </div>
+
+</body>
+</html>

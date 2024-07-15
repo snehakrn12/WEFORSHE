@@ -1,0 +1,105 @@
+body {
+    font-family: "Merriweather", serif;
+    background-image: url("img/rformbg.png");
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-size: cover;
+    
+}
+
+.container {
+    width: 600px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    height: 660px;
+    font-family: "Merriweather", serif;
+}
+
+header {
+    background-image: linear-gradient(to right top, #f3accc, #eaaad2, #dfa8d8, #d2a7de, #c3a7e2, #c3a7e2, #c3a7e2, #c3a7e2, #d2a7de, #dfa8d8, #eaaad2, #f3accc);
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    font-family: "Merriweather", serif;
+}
+
+h2{
+    text-align: center;
+    font-family: "Merriweather", serif;
+    margin-top: 10px;
+    padding-top: -10px;
+}
+
+form {
+    display: flex;
+    flex-wrap: wrap;
+    font-family: "Merriweather", serif;
+}
+
+section {
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+#upcoming-list {
+    list-style: none;
+    padding: 0;
+}
+
+#upcoming-list li {
+    background-color: #efefef;
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: "Merriweather", serif;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    
+}
+
+#upcoming-list li:hover {
+    background-color: #e0e0e0;
+}
+
+#reminder-form {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#reminder-form label {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+#reminder-form input[type="text"],
+#reminder-form input[type="date"] {
+    padding: 10px;
+    width: calc(100% - 22px);
+    margin-bottom: 10px;
+}
+
+#reminder-form button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #ef5350;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#reminder-form button:hover {
+    background-color: #d32f2f;
+}
+
+.event{
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+}

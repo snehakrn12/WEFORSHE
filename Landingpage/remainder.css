@@ -1,0 +1,20 @@
+ body {
+      margin: 0;
+      padding: 10px;
+      height: 150px;
+      display: flex;
+      justify-content: left;
+      align-items: left;
+      position: unset;
+    }
+
+    .clock {
+      position: unset;
+      bottom: 10px;
+      left: 10px;
+    }
+
+    .fa-clock {
+      font-size: 25px;
+      color: #503785;
+    }

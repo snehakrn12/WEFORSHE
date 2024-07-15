@@ -1,0 +1,181 @@
+body {
+    font-family: "Merriweather", serif;
+    background:url("img/formbg.jpeg");
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 40px 0; /* Add padding to create space from top and bottom */
+    box-sizing: border-box;
+    padding-right: 7%;
+    font-weight: bold;
+    color: black;
+}
+
+
+.container {
+    width: 600px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    font-weight: bold;
+    color: black;
+}
+
+header {
+    background-image: linear-gradient(to left bottom, #31fc5c, #00ecab, #00d5de, #00b9ef, #009bdc, #009bdc, #009bdc, #009bdc, #00b9ef, #00d5de, #00ecab, #31fc5c);
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+#header-info {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+#game-container {
+    padding: 20px;
+}
+
+#question-container {
+    margin-bottom: 20px;
+}
+
+#answer-buttons .btn {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    font-size: 16px;
+    background-color: #efefef;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    color: black;
+    font-family: "Merriweather", serif;
+}
+
+#answer-buttons .btn:hover {
+    background-color: #ddd;
+}
+
+#controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#next-btn, #end-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #ef5350;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#next-btn:hover, #end-btn:hover {
+    background-color: #d32f2f;
+}
+
+#score {
+    font-size: 18px;
+}
+
+#leaderboard-container {
+    padding: 20px;
+}
+
+#leaderboard-list {
+    list-style: none;
+    padding: 0;
+}
+
+#leaderboard-list li {
+    background-color: #efefef;
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+#play-again-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #ef5350;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+#play-again-btn:hover {
+    background-color: #d32f2f;
+}
+
+/*.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000; 
+}
+
+.popup-content {
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    position: relative;
+    width: 500px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    bottom: 50%;
+    right: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.popup-content .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 24px;
+}
+
+.coin {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.coin-image {
+    width: 100px; 
+    animation: rotateCoin 2s infinite linear;
+}
+
+.coin-text {
+    margin-top: 10px;
+    font-weight: bold;
+    color: #021c4e;
+}
+
+@keyframes rotateCoin {
+    from {
+        transform: rotateY(0deg);
+    }
+    to {
+        transform: rotateY(360deg);
+    }
+}
+*/

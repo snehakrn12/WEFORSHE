@@ -1,0 +1,152 @@
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(to bottom, #ff9a9e 0%, #fad0c4 99%, #fad0c4 100%);
+  overflow: hidden;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.card {
+  width: 100%;
+  max-width: 300px;
+  height: 80%;
+  background: white;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2), 0 0 10px rgba(0, 0, 0, 0.3);
+  text-align: left;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  user-select: none;
+  cursor: pointer;
+  overflow: hidden;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.card.swipe-left {
+  animation: swipeLeft 0.5s forwards;
+}
+
+.card.swipe-right {
+  animation: swipeRight 0.5s forwards;
+}
+
+@keyframes swipeLeft {
+  0% {
+      transform: translate(-50%, -50%);
+      opacity: 1;
+  }
+  100% {
+      transform: translate(-150%, -50%);
+      opacity: 0;
+  }
+}
+
+@keyframes swipeRight {
+  0% {
+      transform: translate(-50%, -50%);
+      opacity: 1;
+  }
+  100% {
+      transform: translate(50%, -50%);
+      opacity: 0;
+  }
+}
+
+.card img {
+  width: 80%;
+  height: 60%;
+  object-fit: cover;
+  border-radius: 10px; /* Apply border radius throughout the image */
+  display: block;
+  margin: 0 auto; /* Center the image horizontally */
+  padding-top: 30px;
+}
+
+.card-content {
+  padding: 10px;
+  padding-left: 10%; /* Leave 20% width for left margin */
+  padding-right: 10%;
+}
+
+.card-container {
+  position: relative;
+  width: 300px;
+  height: 450px;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.rating span {
+  margin-right: 5px;
+}
+
+.star {
+  margin-left: 2px;
+}
+
+.price {
+  font-size: 16px;
+  color: #000000;
+  margin-bottom: 10px;
+}
+
+.description {
+  font-size: 14px;
+  color: #000000;
+  margin-bottom: 20px;
+}
+
+.card-actions {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+}
+
+.dislike-btn, .like-btn {
+  border: none;
+  background: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.dislike-btn:hover, .like-btn:hover {
+  opacity: 0.7;
+}
+
+@media (min-width: 768px) {
+  .card {
+      width: 300px;
+  }
+}
+
+.glitter {
+  position: absolute;
+  font-size: 24px;
+  color: #eaff00;
+  animation: glitter 2s ease-out;
+}
+
+@keyframes glitter {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
